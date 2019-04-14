@@ -129,7 +129,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    throw new Error('Not implemented');
+    return value.toString().split('').pop();
 }
 
 
@@ -145,7 +145,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    throw new Error('Not implemented');
+    return +value
 }
 
 /**
@@ -204,8 +204,13 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) return false;
+    }
+    return n > 1;
 }
+
+
 
 /**
  * Tries to convert value to number and returns it if conversion was successfull;
